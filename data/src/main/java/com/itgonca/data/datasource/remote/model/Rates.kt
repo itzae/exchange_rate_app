@@ -5,13 +5,15 @@ import com.google.gson.annotations.SerializedName
 
 data class Rates(
     @SerializedName("AUD")
-    val aUD: Double,
+    val aud: Double,
     @SerializedName("CAD")
-    val cAD: Double,
+    val cad: Double,
     @SerializedName("MXN")
-    val mXN: Double,
+    val mxn: Double,
     @SerializedName("PLN")
-    val pLN: Double,
+    val pln: Double,
     @SerializedName("USD")
-    val uSD: Double
+    val usd: Double,
+    @SerializedName("EUR")
+    val eur: Double
 )

@@ -3,9 +3,14 @@ package com.itgonca.data.datasource.remote.service
 import com.itgonca.data.datasource.remote.model.HistoricalResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface HistoricalApi {
 
-    @GET("{date}{access_key}{symbols}")
-    suspend fun getHistorical(@Path("date") date: String,@Path("access_key") key:String,@Path("symbols") symbols:String): HistoricalResponse
+    @GET("{date}?")
+    suspend fun getHistorical(
+        @Path("date") date: String,
+        @Query("access_key") key: String,
+        @Query("symbols") symbols: String
+    ): HistoricalResponse
 }
