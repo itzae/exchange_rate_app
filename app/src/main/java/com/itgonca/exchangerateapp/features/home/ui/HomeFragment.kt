@@ -19,6 +19,8 @@ import com.itgonca.exchangerateapp.R
 import com.itgonca.exchangerateapp.common.StateUI
 import com.itgonca.exchangerateapp.databinding.FragmentHomeBinding
 import com.itgonca.exchangerateapp.features.home.viewmodel.HomeViewModel
+import com.itgonca.exchangerateapp.utils.extensions.getDateByDays
+import com.itgonca.exchangerateapp.utils.extensions.getDate
 import javax.inject.Inject
 
 /**
@@ -49,7 +51,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getHistorical("2021-01-15")
+        viewModel.getHistorical(getDate())
         initObservers()
         initUI()
     }
@@ -79,14 +81,17 @@ class HomeFragment : Fragment() {
         })
     }
 
+    /**
+     * This method initialize the views of the [HomeFragment]
+     */
     private fun initUI() {
         binding.chipDateGroup.setOnCheckedChangeListener { _, checkedId ->
             val dateParam = when (checkedId) {
-                R.id.chipToday -> "2021-01-10"
-                R.id.chipYesterday -> "2021-01-20"
-                R.id.chipSevenDays -> "2020-12-15"
-                R.id.chipThirtyDays -> "2020-09-12"
-                else -> ""
+                R.id.chipToday -> getDate()
+                R.id.chipYesterday -> getDateByDays(1)
+                R.id.chipSevenDays -> getDateByDays(7)
+                R.id.chipThirtyDays -> getDateByDays(30)
+                else -> getDate()
             }
 
             viewModel.getHistorical(dateParam)
