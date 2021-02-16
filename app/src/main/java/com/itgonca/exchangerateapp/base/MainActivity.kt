@@ -1,8 +1,8 @@
-package com.itgonca.exchangerateapp
+package com.itgonca.exchangerateapp.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.itgonca.exchangerateapp.base.App
+import com.itgonca.exchangerateapp.R
 import com.itgonca.exchangerateapp.di.MainComponent
 import com.itgonca.exchangerateapp.features.home.ui.HomeFragment
 

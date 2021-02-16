@@ -3,8 +3,6 @@ package com.itgonca.exchangerateapp.di
 import android.content.Context
 import com.itgonca.data.di.DataModule
 import com.itgonca.domain.di.DomainModule
-import com.itgonca.exchangerateapp.MainActivity
-import com.itgonca.exchangerateapp.features.home.ui.HomeFragment
 import dagger.BindsInstance
 import dagger.Component
 

@@ -2,7 +2,6 @@ package com.itgonca.exchangerateapp.features.home.ui
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,7 @@ import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.itgonca.domain.model.Historical
-import com.itgonca.exchangerateapp.MainActivity
+import com.itgonca.exchangerateapp.base.MainActivity
 import com.itgonca.exchangerateapp.R
 import com.itgonca.exchangerateapp.common.StateUI
 import com.itgonca.exchangerateapp.databinding.FragmentHomeBinding
@@ -23,6 +22,7 @@ import com.itgonca.exchangerateapp.features.home.ui.adapters.CurrencyAdapter
 import com.itgonca.exchangerateapp.features.home.viewmodel.HomeViewModel
 import com.itgonca.exchangerateapp.utils.extensions.getDateByDays
 import com.itgonca.exchangerateapp.utils.extensions.getDate
+import com.itgonca.exchangerateapp.utils.extensions.showToast
 import javax.inject.Inject
 
 /**
@@ -82,9 +82,7 @@ class HomeFragment : Fragment() {
                     initChart(it.data)
                     loadDataInRecycler(it.data)
                 }
-                is StateUI.Error -> {
-                    Log.e("TAG", "Data Error: ${it.message}")
-                }
+                is StateUI.Error -> showToast("Ha ocurrido un error al obtener los datos")
             }
         })
     }
@@ -150,6 +148,9 @@ class HomeFragment : Fragment() {
         }
     }
 
+    /**
+     * This method
+     */
     private fun loadDataInRecycler(dataList: List<Historical>){
         mCurrencyAdapter.submitList(dataList)
         binding.rvOtherCurrencies.adapter = mCurrencyAdapter

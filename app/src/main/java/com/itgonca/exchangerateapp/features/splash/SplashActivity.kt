@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import com.itgonca.exchangerateapp.MainActivity
+import com.itgonca.exchangerateapp.base.MainActivity
 import com.itgonca.exchangerateapp.R
 
 class SplashActivity : AppCompatActivity() {
