@@ -8,6 +8,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.itgonca.exchangerateapp"
         minSdkVersion 23
@@ -45,6 +49,7 @@ dependencies {
     implementation "com.google.android.material:material:$material_design_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
     implementation "com.airbnb.android:lottie:$lottie_version"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     //Lifecycle
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"

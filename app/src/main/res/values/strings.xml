@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exchange Rate App</string>
+    <string name="title_label">Historical Exchange Rate Graph</string>
 </resources>
