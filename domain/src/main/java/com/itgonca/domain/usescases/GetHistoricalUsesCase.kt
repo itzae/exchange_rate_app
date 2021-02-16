@@ -21,6 +21,7 @@ class GetHistoricalUsesCase @Inject constructor(private val historicalRepository
     suspend fun getHistorical(): List<Historical> {
         val listHistorical = mutableListOf<Historical>()
         historicalRepository.getHistorical().rates.apply {
+            listHistorical.add(Historical("USD", usd))
             listHistorical.add(Historical("CNY", cny))
             listHistorical.add(Historical("CAD", cad))
             listHistorical.add(Historical("MXN", mxn))

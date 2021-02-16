@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Exchange Rate App</string>
     <string name="title_label">Historical Exchange Rate Graph</string>
+    <string name="subtitle_label">The following graph shows the historical exchange rate of the most common currencies based on the euro.</string>
+    <string name="today_label">Today</string>
+    <string name="yesterday_label">Yesterday</string>
+    <string name="seven_days_label">7 days</string>
+    <string name="thirty_days_label">30 days</string>
 </resources>

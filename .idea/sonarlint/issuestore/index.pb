@@ -61,3 +61,7 @@ Ddata/src/main/java/com/itgonca/data/datasource/remote/model/Rates.kt,7\7\773f2
 Ndata/src/main/java/com/itgonca/data/datasource/remote/service/HistoricalApi.kt,4\9\4956459a12bd2a58e6c0b4df78b793dbbb102d9d
 Å
 Qdata/src/main/java/com/itgonca/data/datasource/remote/model/HistoricalResponse.kt,9\1\91032219e86dd1bb7a9ded112ac5cd4890129cd3
+o
+?app/src/main/java/com/itgonca/exchangerateapp/common/StateUI.kt,e\9\e9fca6994d8d63e4720640dfbf56eedece98cd86
+k
+;domain/src/main/java/com/itgonca/domain/model/Historical.kt,4\8\481e1f0793a0dd4dd5c957033b620f85b9e57924

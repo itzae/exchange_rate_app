@@ -8,7 +8,7 @@ import com.itgonca.exchangerateapp.features.home.ui.HomeFragment
 import dagger.BindsInstance
 import dagger.Component
 
-@Component(modules = [ApplicationModule::class, DataModule::class, DomainModule::class, AppSubComponents::class])
+@Component(modules = [DataModule::class, DomainModule::class, AppSubComponents::class])
 interface ApplicationComponent {
 
     @Component.Factory
