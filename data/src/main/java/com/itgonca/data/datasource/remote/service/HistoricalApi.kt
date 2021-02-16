@@ -10,7 +10,6 @@ interface HistoricalApi {
     @GET("{date}?")
     suspend fun getHistorical(
         @Path("date") date: String,
-        @Query("access_key") key: String,
-        @Query("symbols") symbols: String
+        @Query("access_key") key: String
     ): HistoricalResponse
 }

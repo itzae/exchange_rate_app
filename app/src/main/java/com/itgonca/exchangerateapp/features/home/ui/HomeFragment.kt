@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
@@ -18,6 +19,7 @@ import com.itgonca.exchangerateapp.MainActivity
 import com.itgonca.exchangerateapp.R
 import com.itgonca.exchangerateapp.common.StateUI
 import com.itgonca.exchangerateapp.databinding.FragmentHomeBinding
+import com.itgonca.exchangerateapp.features.home.ui.adapters.CurrencyAdapter
 import com.itgonca.exchangerateapp.features.home.viewmodel.HomeViewModel
 import com.itgonca.exchangerateapp.utils.extensions.getDateByDays
 import com.itgonca.exchangerateapp.utils.extensions.getDate
@@ -32,12 +34,18 @@ class HomeFragment : Fragment() {
     @Inject
     lateinit var viewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var mCurrencyAdapter: CurrencyAdapter
 
     private val binding get() = _binding!!
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         (activity as MainActivity).mainComponent.inject(this)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mCurrencyAdapter = CurrencyAdapter()
     }
 
     override fun onCreateView(
@@ -72,7 +80,7 @@ class HomeFragment : Fragment() {
                 }
                 is StateUI.Success -> {
                     initChart(it.data)
-                    Log.i("TAG", "Data UI: ${it.data}")
+                    loadDataInRecycler(it.data)
                 }
                 is StateUI.Error -> {
                     Log.e("TAG", "Data Error: ${it.message}")
@@ -96,6 +104,10 @@ class HomeFragment : Fragment() {
 
             viewModel.getHistorical(dateParam)
         }
+        binding.rvOtherCurrencies.apply {
+            layoutManager = LinearLayoutManager(requireActivity(),LinearLayoutManager.VERTICAL,false)
+            adapter = mCurrencyAdapter
+        }
     }
 
     /**
@@ -105,9 +117,11 @@ class HomeFragment : Fragment() {
      */
     private fun initChart(dataList: List<Historical>) {
         val entries = ArrayList<Entry>()
+        val listSymbols = listOf("CNY", "CAD", "MXN", "GBP", "USD")
         val stringData = arrayListOf<String>()
+        val dataFiltered = dataList.filter { it.symbol in listSymbols }
 
-        dataList.mapIndexed { index, historical ->
+        dataFiltered.mapIndexed { index, historical ->
             entries.add(Entry((index.toFloat()), historical.rate.toFloat()))
             stringData.add(index, historical.symbol)
         }
@@ -134,5 +148,11 @@ class HomeFragment : Fragment() {
             animateX(1800, Easing.EaseInExpo)
             invalidate()
         }
+    }
+
+    private fun loadDataInRecycler(dataList: List<Historical>){
+        mCurrencyAdapter.submitList(dataList)
+        binding.rvOtherCurrencies.adapter = mCurrencyAdapter
+
     }
 }

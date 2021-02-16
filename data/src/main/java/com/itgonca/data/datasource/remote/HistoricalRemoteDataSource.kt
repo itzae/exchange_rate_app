@@ -8,7 +8,6 @@ class HistoricalRemoteDataSource @Inject constructor(private val historicalApi: 
     suspend fun getHistoricalApi(dateParam: String): HistoricalResponse =
         historicalApi.getHistorical(
             dateParam,
-            RetrofitInstance.API_KEY,
-            "USD,CNY,GBP,MXN,CAD"
+            RetrofitInstance.API_KEY
         )
 }

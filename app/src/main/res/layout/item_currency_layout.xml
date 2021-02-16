@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    app:cardElevation="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIconCurrency"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_exchange" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameCurrency"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:fontFamily="@font/roboto_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toEndOf="@+id/ivIconCurrency"
+            app:layout_constraintTop_toTopOf="@+id/ivIconCurrency"
+            tools:text="USD" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRateCurrency"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            app:fontFamily="@font/roboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ivIconCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameCurrency"
+            android:text="@string/rate_label"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRateValueCurrency"
+            android:layout_width="wrap_content"
+            android:textColor="@color/amber_700"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            tools:text="1.26594"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRateCurrency"
+            app:layout_constraintStart_toEndOf="@id/tvRateCurrency"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameCurrency" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
