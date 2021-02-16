@@ -1,14 +1,10 @@
 
 R
 "app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
-m
-=app/src/main/java/com/itgonca/exchangerateapp/MainActivity.kt,f\2\f2fcacff18696c1acca07aebb7486425ffce9010
 Ü
 Vapp/src/main/java/com/itgonca/exchangerateapp/features/home/viewmodel/HomeViewModel.kt,6\a\6a39234e0521c964960d6551fc1db9f963d96afa
 j
 :domain/src/main/java/com/itgonca/domain/di/DomainModule.kt,3\d\3d12ac0740ab7dff1265e9317869ce9a526ea16d
-u
-Eapp/src/main/java/com/itgonca/exchangerateapp/di/ApplicationModule.kt,3\0\30d46a2922085f07bc89a7109efb6ba95c288981
 É
 Sdata/src/main/java/com/itgonca/data/datasource/remote/HistoricalRemoteDataSource.kt,2\4\24d0dde8b042e23e6276eadc027b163fc8c68e64
 w
@@ -41,8 +37,6 @@ C
 domain/build.gradle,a\3\a3021bb5ba623a461b5fdb89ae51923a4945c354
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
-Å
-Qdata/src/main/java/com/itgonca/data/datasource/local/HistoricalLocalDataSource.kt,4\f\4fed378f6b8eb7029527a1e97a66be6fff02a381
 
 Oapp/src/main/java/com/itgonca/exchangerateapp/features/splash/SplashActivity.kt,6\c\6c470e315b5cf98fc68f8249cbfe2797e8331716
 R
@@ -63,3 +57,23 @@ o
 ?app/src/main/java/com/itgonca/exchangerateapp/common/StateUI.kt,e\9\e9fca6994d8d63e4720640dfbf56eedece98cd86
 k
 ;domain/src/main/java/com/itgonca/domain/model/Historical.kt,4\8\481e1f0793a0dd4dd5c957033b620f85b9e57924
+Ä
+Papp/src/main/java/com/itgonca/exchangerateapp/utils/extensions/DateExtensions.kt,8\f\8ffca1d7d85e7e1768969dae96b78b594b2107d8
+ä
+Zapp/src/main/java/com/itgonca/exchangerateapp/features/home/ui/adapters/CurrencyAdapter.kt,f\0\f005475044b3fd7d88f58b2d7b7b61b89bd62425
+è
+_app/src/main/java/com/itgonca/exchangerateapp/features/home/ui/viewholder/CurrencyViewHolder.kt,8\8\882c96392d23358a7269fb52b52130e1dfb15b64
+Y
+)app/src/main/res/drawable/ic_exchange.xml,f\6\f6cffd3aadb1044267b3499eddc80c1604792408
+`
+0app/src/main/res/layout/item_currency_layout.xml,5\9\59697d4ca33aa9cc1c866af41dae9e34bac6bf56
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
+r
+Bapp/src/main/java/com/itgonca/exchangerateapp/base/MainActivity.kt,4\7\471ce8e7fee4f4166ced871b081e335f00b348bd
+É
+Sapp/src/main/java/com/itgonca/exchangerateapp/utils/extensions/FragmentExtension.kt,7\5\755eec5b812735361f9561847fb2d0ffb2da1b66
+R
+"app/src/main/res/values/themes.xml,e\b\eb7f0f821bde169dd21862705b2b042d2cea69a3
+X
+(app/src/main/res/values-night/themes.xml,8\c\8c3a6b96d9ffba496992e612d58227c19e6b9e65
