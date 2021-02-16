@@ -1,7 +1,6 @@
 package com.itgonca.exchangerateapp.features.home.ui
 
 import android.content.Context
-import android.graphics.Color.red
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -22,7 +21,10 @@ import com.itgonca.exchangerateapp.databinding.FragmentHomeBinding
 import com.itgonca.exchangerateapp.features.home.viewmodel.HomeViewModel
 import javax.inject.Inject
 
-
+/**
+ * @author Itzae González Castillo
+ * This class belongs to the Home screen, where all the application data will be displayed
+ */
 class HomeFragment : Fragment() {
 
     @Inject
@@ -47,11 +49,24 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getHistorical()
+        viewModel.getHistorical("2021-01-15")
+        initObservers()
+        initUI()
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+    /**
+     * This method initialize the [HomeViewModel] observers
+     */
+    private fun initObservers() {
         viewModel.historicalData.observe(viewLifecycleOwner, Observer {
             when (it) {
                 StateUI.Loading -> {
+                    //not implemented
                 }
                 is StateUI.Success -> {
                     initChart(it.data)
@@ -64,48 +79,53 @@ class HomeFragment : Fragment() {
         })
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
+    private fun initUI() {
+        binding.chipDateGroup.setOnCheckedChangeListener { _, checkedId ->
+            val dateParam = when (checkedId) {
+                R.id.chipToday -> "2021-01-10"
+                R.id.chipYesterday -> "2021-01-20"
+                R.id.chipSevenDays -> "2020-12-15"
+                R.id.chipThirtyDays -> "2020-09-12"
+                else -> ""
+            }
+
+            viewModel.getHistorical(dateParam)
+        }
     }
 
+    /**
+     * This method performs the configuration of the linear graph, for example the data to display
+     * and format.
+     * @param dataList is the data source to represent in the graph
+     */
     private fun initChart(dataList: List<Historical>) {
-        //Part1
         val entries = ArrayList<Entry>()
         val stringData = arrayListOf<String>()
 
-//Part2
         dataList.mapIndexed { index, historical ->
-            entries.add(Entry((index.toFloat() ), historical.rate.toFloat()))
+            entries.add(Entry((index.toFloat()), historical.rate.toFloat()))
             stringData.add(index, historical.symbol)
         }
-        //Part3
-        val vl = LineDataSet(entries, "Rate")
 
-//Part4
-        vl.setDrawValues(true)
-        vl.setDrawFilled(true)
-        vl.lineWidth = 3f
-        vl.fillColor = R.color.amber_700
-        vl.fillAlpha = R.color.cyan_500
+        val mDataSet = LineDataSet(entries, "Rate")
+
+        mDataSet.apply {
+            setDrawValues(true)
+            setDrawFilled(true)
+            lineWidth = 3f
+            fillColor = R.color.amber_700
+            fillAlpha = R.color.cyan_500
+        }
+
         binding.chartHistorical.apply {
             xAxis.labelRotationAngle = 0f
-//Part6
-            data = LineData(vl)
-
-//Part7
+            data = LineData(mDataSet)
             axisRight.isEnabled = false
-
-//Part8
             setTouchEnabled(true)
             setPinchZoom(true)
-
-//Part9
             description.text = "Currency"
             xAxis.granularity = 1f
             xAxis.valueFormatter = IndexAxisValueFormatter(stringData)
-
-//Part10
             animateX(1800, Easing.EaseInExpo)
             invalidate()
         }

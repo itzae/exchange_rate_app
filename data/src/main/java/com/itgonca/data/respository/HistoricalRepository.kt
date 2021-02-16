@@ -6,5 +6,5 @@ import com.itgonca.data.datasource.remote.model.HistoricalResponse
  * @author Itzae González Castillo
  */
 interface HistoricalRepository {
-    suspend fun getHistorical():HistoricalResponse
+    suspend fun getHistorical(dateParam:String):HistoricalResponse
 }

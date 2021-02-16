@@ -18,11 +18,11 @@ class HomeViewModel @Inject constructor(private val historicalUsesCase: GetHisto
     val historicalData: LiveData<StateUI<List<Historical>>>
         get() = _historicalData
 
-    fun getHistorical() {
+    fun getHistorical(dateParam:String) {
         viewModelScope.launch {
             //h
             try {
-                val data = historicalUsesCase.getHistorical()
+                val data = historicalUsesCase.getHistorical(dateParam)
                 _historicalData.postValue(StateUI.Success(data))
             } catch (e: Exception) {
                 _historicalData.postValue(StateUI.Error(type = 1,message = e.message))

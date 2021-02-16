@@ -5,6 +5,6 @@ import javax.inject.Inject
 
 class HistoricalRepositoryImpl @Inject constructor(private val historicalRemote: HistoricalRemoteDataSource) :
     HistoricalRepository {
-    override suspend fun getHistorical() = historicalRemote.getHistoricalApi()
+    override suspend fun getHistorical(dateParam:String) = historicalRemote.getHistoricalApi(dateParam)
 
 }
