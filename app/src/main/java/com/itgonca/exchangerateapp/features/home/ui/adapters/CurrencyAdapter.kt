@@ -8,6 +8,10 @@ import com.itgonca.domain.model.Historical
 import com.itgonca.exchangerateapp.databinding.ItemCurrencyLayoutBinding
 import com.itgonca.exchangerateapp.features.home.ui.viewholder.CurrencyViewHolder
 
+/**
+ * This class is the adapter of the recyclerview that shows the list of coins with their proper
+ * information
+ */
 class CurrencyAdapter : ListAdapter<Historical, CurrencyViewHolder>(DiffUtilCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder {
         val view =

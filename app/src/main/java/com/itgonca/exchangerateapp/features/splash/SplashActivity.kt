@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.itgonca.exchangerateapp.base.MainActivity
 import com.itgonca.exchangerateapp.R
 
+/**
+ * This activity is shown when opening the application, showing an animation like Splash
+ */
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

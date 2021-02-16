@@ -149,7 +149,8 @@ class HomeFragment : Fragment() {
     }
 
     /**
-     * This method
+     * this method loads the data obtained from the viewmodel into the recycler
+     * @param dataList is the data source to display
      */
     private fun loadDataInRecycler(dataList: List<Historical>){
         mCurrencyAdapter.submitList(dataList)

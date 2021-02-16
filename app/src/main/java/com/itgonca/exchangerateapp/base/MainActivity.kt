@@ -6,6 +6,9 @@ import com.itgonca.exchangerateapp.R
 import com.itgonca.exchangerateapp.di.MainComponent
 import com.itgonca.exchangerateapp.features.home.ui.HomeFragment
 
+/**
+ * This is the activity where the application fragments are loaded
+ */
 class MainActivity : AppCompatActivity() {
 
     lateinit var mainComponent:MainComponent
@@ -16,5 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportFragmentManager.beginTransaction().add(R.id.navHost,HomeFragment()).commit()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }
