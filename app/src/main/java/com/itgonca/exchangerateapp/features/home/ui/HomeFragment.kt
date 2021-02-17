@@ -93,6 +93,7 @@ class HomeFragment : Fragment() {
      * This method initialize the views of the [HomeFragment]
      */
     private fun initUI() {
+        binding.nestedScroll.parent.requestChildFocus(binding.nestedScroll,binding.nestedScroll)
         binding.chipDateGroup.setOnCheckedChangeListener { _, checkedId ->
             val dateParam = when (checkedId) {
                 R.id.chipToday -> getDate()

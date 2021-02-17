@@ -1,6 +1,4 @@
 
-R
-"app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
 †
 Vapp/src/main/java/com/itgonca/exchangerateapp/features/home/viewmodel/HomeViewModel.kt,6\a\6a39234e0521c964960d6551fc1db9f963d96afa
 j
@@ -78,3 +76,17 @@ w
 Gapp/src/test/java/com/itgonca/exchangerateapp/util/TestCoroutineRule.kt,4\5\455e9f2858409a9b874721b0840a570eaf6e7fa3
 Š
 Zapp/src/test/java/com/itgonca/exchangerateapp/features/home/viewmodel/HomeViewModelTest.kt,8\b\8bd1c15fd08817d9fe737f01407e13e928c8680a
+‰
+Yapp/src/test/java/com/itgonca/exchangerateapp/data/repository/FakeHistoricalRepository.kt,2\e\2ed30a7d4b8df0945eaafa8b09fbf580521df354
+r
+Bapp/src/main/java/com/itgonca/exchangerateapp/base/BaseActivity.kt,6\b\6b84b5dedf624318a6e50e2b84184b6b96e54045
+|
+Lapp/src/main/java/com/itgonca/exchangerateapp/common/dialogs/LoaderDialog.kt,1\a\1a70a22961872b22121fb0885ac5ee0668cb13ed
+P
+ app/src/main/res/raw/loader.json,c\a\ca6c73ee2a9781388a794937b162ea370f332f66
+R
+"app/src/main/res/values/styles.xml,f\7\f79cc2688e29fcbc286fda14ae07b27c9e83690f
+Y
+)app/src/main/res/layout/dialog_loader.xml,3\0\30106682ab62b1370827f09c536a9c9a913ec4ef
+`
+0app/src/main/res/layout/item_currency_layout.xml,5\9\59697d4ca33aa9cc1c866af41dae9e34bac6bf56
