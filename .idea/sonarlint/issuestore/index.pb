@@ -71,3 +71,12 @@ R
 "app/src/main/res/values/themes.xml,e\b\eb7f0f821bde169dd21862705b2b042d2cea69a3
 X
 (app/src/main/res/values-night/themes.xml,8\c\8c3a6b96d9ffba496992e612d58227c19e6b9e65
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+Y
+)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
+w
+Gapp/src/test/java/com/itgonca/exchangerateapp/util/TestCoroutineRule.kt,4\5\455e9f2858409a9b874721b0840a570eaf6e7fa3
+Š
+Zapp/src/test/java/com/itgonca/exchangerateapp/features/home/viewmodel/HomeViewModelTest.kt,8\b\8bd1c15fd08817d9fe737f01407e13e928c8680a

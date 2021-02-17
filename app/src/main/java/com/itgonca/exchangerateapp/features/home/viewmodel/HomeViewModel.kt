@@ -10,9 +10,6 @@ import com.itgonca.exchangerateapp.common.StateUI
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/**
- * This class
- */
 class HomeViewModel @Inject constructor(private val historicalUsesCase: GetHistoricalUsesCase) :
     ViewModel() {
 
