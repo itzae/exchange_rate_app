@@ -30,4 +30,4 @@ For this project Clean Architecture was used with the following modules
 
 ## Download and Install
 
-[APK](https://drive.google.com/file/d/10R4OByrBeIhgsyLi3OqIb-WEhl7YAd9X/view?usp=sharing)
+[APK](https://drive.google.com/file/d/10mTMTiw70cV79tntQBXYbK1xeRF7HOO8/view?usp=sharing)
