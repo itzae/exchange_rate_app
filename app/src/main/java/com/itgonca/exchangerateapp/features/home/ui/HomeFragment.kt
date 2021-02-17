@@ -75,14 +75,16 @@ class HomeFragment : Fragment() {
     private fun initObservers() {
         viewModel.historicalData.observe(viewLifecycleOwner, Observer {
             when (it) {
-                StateUI.Loading -> {
-                    //not implemented
-                }
+                StateUI.Loading -> (activity as MainActivity).showLoader()
                 is StateUI.Success -> {
+                    (activity as MainActivity).hideLoader()
                     initChart(it.data)
                     loadDataInRecycler(it.data)
                 }
-                is StateUI.Error -> showToast(getString(R.string.error_data_label))
+                is StateUI.Error -> {
+                    (activity as MainActivity).hideLoader()
+                    showToast(getString(R.string.error_data_label))
+                }
             }
         })
     }

@@ -39,8 +39,6 @@ C
 Oapp/src/main/java/com/itgonca/exchangerateapp/features/splash/SplashActivity.kt,6\c\6c470e315b5cf98fc68f8249cbfe2797e8331716
 R
 "app/src/main/res/raw/splash01.json,a\e\aede46fcc733961b67e55640c241bc46cbd8cbea
-R
-"app/src/main/res/values/styles.xml,f\7\f79cc2688e29fcbc286fda14ae07b27c9e83690f
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 y

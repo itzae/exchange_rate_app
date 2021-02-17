@@ -5,110 +5,138 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTitle"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"
-        app:fontFamily="@font/roboto_bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/title_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvSubtitle"
-        app:fontFamily="@font/roboto"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/subtitle_label"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
-
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipDateGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
-        app:singleSelection="true">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipToday"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:fontFamily="@font/roboto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/today_label" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipYesterday"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:fontFamily="@font/roboto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/yesterday_label" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipSevenDays"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:fontFamily="@font/roboto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/seven_days_label" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipThirtyDays"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:fontFamily="@font/roboto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/thirty_days_label" />
-    </com.google.android.material.chip.ChipGroup>
-
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/chartHistorical"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chipDateGroup" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOtherSubtitle"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:fontFamily="@font/roboto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/other_currencies_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chartHistorical" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvOtherCurrencies"
-        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvOtherSubtitle"
-        tools:listitem="@layout/item_currency_layout" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/title_label"
+                app:fontFamily="@font/roboto_bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/subtitle_label"
+                android:textAlignment="center"
+                app:fontFamily="@font/roboto"
+                app:layout_constraintBottom_toTopOf="@+id/chipDateGroup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipDateGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/chartHistorical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipToday"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/today_label" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipYesterday"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/yesterday_label" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSevenDays"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/seven_days_label" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipThirtyDays"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="@string/thirty_days_label" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartHistorical"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/tvOtherSubtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chipDateGroup" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOtherSubtitle"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/other_currencies_label"
+                app:layout_constraintBottom_toTopOf="@+id/rvOtherCurrencies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chartHistorical" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvOtherCurrencies"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOtherSubtitle"
+                tools:listitem="@layout/item_currency_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
