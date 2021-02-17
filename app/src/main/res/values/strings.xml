@@ -8,4 +8,5 @@
     <string name="thirty_days_label">30 days</string>
     <string name="other_currencies_label">Other currencies</string>
     <string name="rate_label">Rate:</string>
+    <string name="error_data_label">An error occurred while getting the data</string>
 </resources>

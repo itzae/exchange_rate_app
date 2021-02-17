@@ -82,7 +82,7 @@ class HomeFragment : Fragment() {
                     initChart(it.data)
                     loadDataInRecycler(it.data)
                 }
-                is StateUI.Error -> showToast("Ha ocurrido un error al obtener los datos")
+                is StateUI.Error -> showToast(getString(R.string.error_data_label))
             }
         })
     }
@@ -103,7 +103,8 @@ class HomeFragment : Fragment() {
             viewModel.getHistorical(dateParam)
         }
         binding.rvOtherCurrencies.apply {
-            layoutManager = LinearLayoutManager(requireActivity(),LinearLayoutManager.VERTICAL,false)
+            layoutManager =
+                LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
             adapter = mCurrencyAdapter
         }
     }
@@ -152,7 +153,7 @@ class HomeFragment : Fragment() {
      * this method loads the data obtained from the viewmodel into the recycler
      * @param dataList is the data source to display
      */
-    private fun loadDataInRecycler(dataList: List<Historical>){
+    private fun loadDataInRecycler(dataList: List<Historical>) {
         mCurrencyAdapter.submitList(dataList)
         binding.rvOtherCurrencies.adapter = mCurrencyAdapter
 

@@ -29,8 +29,6 @@ q
 Aapp/src/main/java/com/itgonca/exchangerateapp/di/MainComponent.kt,4\5\455fc61a6920dab6432638c0d0a508e8648ef5e1
 ~
 Napp/src/main/java/com/itgonca/exchangerateapp/features/home/ui/HomeFragment.kt,0\4\049c9a0e395f8cfd250bbd367dc57b9bccb35593
-Y
-)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
 x
 Happ/src/main/java/com/itgonca/exchangerateapp/di/ApplicationComponent.kt,3\0\305ba6416ce0b2ea6e47fecd318609cb65de36a3
 C
@@ -65,10 +63,6 @@ Zapp/src/main/java/com/itgonca/exchangerateapp/features/home/ui/adapters/Currenc
 _app/src/main/java/com/itgonca/exchangerateapp/features/home/ui/viewholder/CurrencyViewHolder.kt,8\8\882c96392d23358a7269fb52b52130e1dfb15b64
 Y
 )app/src/main/res/drawable/ic_exchange.xml,f\6\f6cffd3aadb1044267b3499eddc80c1604792408
-`
-0app/src/main/res/layout/item_currency_layout.xml,5\9\59697d4ca33aa9cc1c866af41dae9e34bac6bf56
-S
-#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
 r
 Bapp/src/main/java/com/itgonca/exchangerateapp/base/MainActivity.kt,4\7\471ce8e7fee4f4166ced871b081e335f00b348bd
 ƒ
