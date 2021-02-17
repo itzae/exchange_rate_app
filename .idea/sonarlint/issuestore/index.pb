@@ -1,6 +1,4 @@
 
-R
-"app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
 †
 Vapp/src/main/java/com/itgonca/exchangerateapp/features/home/viewmodel/HomeViewModel.kt,6\a\6a39234e0521c964960d6551fc1db9f963d96afa
 j
