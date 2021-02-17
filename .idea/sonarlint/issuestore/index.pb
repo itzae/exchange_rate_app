@@ -63,10 +63,6 @@ r
 Bapp/src/main/java/com/itgonca/exchangerateapp/base/MainActivity.kt,4\7\471ce8e7fee4f4166ced871b081e335f00b348bd
 ƒ
 Sapp/src/main/java/com/itgonca/exchangerateapp/utils/extensions/FragmentExtension.kt,7\5\755eec5b812735361f9561847fb2d0ffb2da1b66
-R
-"app/src/main/res/values/themes.xml,e\b\eb7f0f821bde169dd21862705b2b042d2cea69a3
-X
-(app/src/main/res/values-night/themes.xml,8\c\8c3a6b96d9ffba496992e612d58227c19e6b9e65
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -90,3 +86,15 @@ Y
 )app/src/main/res/layout/dialog_loader.xml,3\0\30106682ab62b1370827f09c536a9c9a913ec4ef
 `
 0app/src/main/res/layout/item_currency_layout.xml,5\9\59697d4ca33aa9cc1c866af41dae9e34bac6bf56
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+d
+4app/src/main/res/drawable/ic_launcher_foreground.xml,5\8\587f297f0f0eaa1dcf927b2b5f0bc5430fadf54f
+b
+2app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml,8\e\8e27ba16c655f421171956147d0fde89b7d25d17
+h
+8app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml,6\e\6ec7d34b130497a10dc92abcde9b313d370a89df
+b
+2app/src/main/res/values/ic_launcher_background.xml,1\8\18ccc38e5dffe10da3d8b454d3093a0a4ba78749
+h
+8app/src/main/res/drawable-v24/ic_launcher_foreground.xml,0\7\078508c831007ccb3938b355f0d30a8368f99a8d
